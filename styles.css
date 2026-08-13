@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding doesn't break full-width scaling */
+} 
+
+nav {
+    background-color: rgb(19, 136, 145);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+/* This allows the list to span the full remaining width next to the h1 */
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    width: 100%; /* Spans the full width */
+}
+
+/* This forces every item in the navbar to stretch equally to fill the space */
+nav li {
+    height: 50px;
+    flex-grow: 1; 
+    text-align: center;
+} 
+
+nav a, nav button {
+    height: 100%;
+    width: 100%; /* Ensures the link/button fills the stretched list item */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers the text inside the filled area */
+    text-decoration: none;
+    color: black;
+    border: none;
+    cursor: pointer;
+}
+
+/* Specific styling for the buttons */
+nav button {
+    opacity: 0.4;
+    background-color: rgb(255, 255, 255);
+    transition: background-color 0.2s, opacity 0.2s;
+}
+
+nav a:hover, nav button:hover {
+    background-color: rgb(81, 253, 253);
+    opacity: 1;
+}
+
+/* Keeps the h1 absolute-centered over the top of the full-width bar */
+nav h1 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: lighter;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none; /* Prevents the h1 from blocking clicks on elements underneath it */
+    z-index: 10;
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
+
+footer{
+    background-color: rgb(19, 136, 145);
+     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
